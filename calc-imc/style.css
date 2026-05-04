@@ -3,7 +3,7 @@
    ======================================== */
 
 body {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-color: #1a1a1a;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -25,20 +25,18 @@ body {
 
 .imc-header {
   text-align: center;
-  color: white;
+  color: #ff8c00;
   margin-bottom: var(--spacing-3xl);
-  animation: slideInUp 0.6s ease-out;
 }
 
 .imc-header h1 {
   font-size: 3rem;
   margin-bottom: var(--spacing-md);
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .imc-header p {
   font-size: 1.2rem;
-  opacity: 0.95;
+  color: #cccccc;
   margin-bottom: 0;
 }
 
@@ -59,13 +57,12 @@ body {
   background: white;
   border-radius: var(--radius-2xl);
   padding: var(--spacing-2xl);
-  box-shadow: var(--shadow-dark);
-  animation: zoomIn 0.6s ease-out;
+  box-shadow: var(--shadow-md);
 }
 
 .form-card h2,
 .result-card h2 {
-  color: #333;
+  color: #1a1a1a;
   margin-bottom: var(--spacing-xl);
   font-size: 1.5rem;
 }
@@ -81,7 +78,7 @@ body {
 .form-group label {
   display: block;
   margin-bottom: var(--spacing-md);
-  color: #333;
+  color: #1a1a1a;
   font-weight: var(--font-weight-semibold);
 }
 
@@ -96,8 +93,8 @@ body {
 
 .form-group input:focus {
   outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  border-color: #ff8c00;
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.1);
 }
 
 .form-group input::placeholder {
@@ -113,13 +110,12 @@ body {
    ======================================== */
 
 .result-box {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-color: #ff8c00;
   border-radius: var(--radius-xl);
   padding: var(--spacing-2xl);
   color: white;
   margin-bottom: var(--spacing-xl);
   text-align: center;
-  animation: slideInRight 0.6s ease-out;
 }
 
 .result-value {
@@ -144,7 +140,7 @@ body {
 
 .result-description {
   font-size: 1rem;
-  opacity: 0.9;
+  opacity: 0.95;
   margin: 0;
 }
 
@@ -153,27 +149,27 @@ body {
    ======================================== */
 
 .category-underweight {
-  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  background-color: #2d2d2d;
 }
 
 .category-normal {
-  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+  background-color: #ff8c00;
 }
 
 .category-overweight {
-  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+  background-color: #ff9900;
 }
 
 .category-obesity1 {
-  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  background-color: #ff7700;
 }
 
 .category-obesity2 {
-  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  background-color: #ff6600;
 }
 
 .category-obesity3 {
-  background: linear-gradient(135deg, #c0392b 0%, #922b21 100%);
+  background-color: #ff5500;
 }
 
 /* ========================================
@@ -182,11 +178,10 @@ body {
 
 .imc-footer {
   text-align: center;
-  color: white;
-  opacity: 0.8;
+  color: #cccccc;
   font-size: 0.9rem;
   padding-top: var(--spacing-lg);
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid #333333;
 }
 
 /* ========================================

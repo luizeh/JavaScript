@@ -1,22 +1,7 @@
-/* ========================================
-   CALCULADORA DE IMC - SCRIPT
-   ======================================== */
-
-/**
- * Calcula o IMC baseado em peso e altura
- * @param {number} peso - Peso em kg
- * @param {number} altura - Altura em metros
- * @returns {number} - IMC calculado
- */
 function calcularIMCValue(peso, altura) {
   return peso / (altura * altura);
 }
 
-/**
- * Determina a categoria do IMC
- * @param {number} imc - Valor do IMC
- * @returns {object} - Objeto com categoria e descrição
- */
 function obterCategoria(imc) {
   if (imc <= 18.5) {
     return {
@@ -59,33 +44,25 @@ function obterCategoria(imc) {
   }
 }
 
-/**
- * Evento para calcular IMC quando o formulário é enviado
- * @param {Event} event - Evento do formulário
- */
 function calcularIMC(event) {
   event.preventDefault();
 
   const peso = parseFloat(document.getElementById("peso").value);
   const altura = parseFloat(document.getElementById("altura").value);
 
-  // Validação de entrada
   if (isNaN(peso) || isNaN(altura) || peso <= 0 || altura <= 0) {
     alert("Por favor, insira valores válidos para peso e altura.");
     return;
   }
 
-  // Calcula IMC
   const imc = calcularIMCValue(peso, altura);
   const categoria = obterCategoria(imc);
 
-  // Formata o IMC para exibição
   const imcFormatado = imc.toLocaleString("pt-BR", {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   });
 
-  // Atualiza a card de resultado
   const resultCard = document.getElementById("resultCard");
   const resultIMC = document.getElementById("resultIMC");
   const resultCategory = document.getElementById("resultCategory");
@@ -95,24 +72,16 @@ function calcularIMC(event) {
   resultCategory.textContent = categoria.categoria;
   resultDescription.textContent = categoria.descricao;
 
-  // Aplica a classe de cor apropriada
   resultCard.className = "result-card " + categoria.class;
   resultCard.style.display = "block";
-
-  // Log para debugging
-  console.log(`Peso: ${peso}kg, Altura: ${altura}m, IMC: ${imcFormatado}`);
 }
 
-/**
- * Limpa o formulário e esconde o resultado
- */
 function limparFormulario() {
   document.getElementById("imcForm").reset();
   document.getElementById("resultCard").style.display = "none";
   document.getElementById("peso").focus();
 }
 
-// Event listener para enter no formulário
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("imcForm");
   form.addEventListener("submit", calcularIMC);

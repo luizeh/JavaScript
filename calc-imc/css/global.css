@@ -6,15 +6,15 @@
 
 :root {
   /* Cores - Paleta Principal */
-  --color-primary: #0066ff;
-  --color-primary-dark: #0052cc;
-  --color-secondary: #ff3366;
+  --color-primary: #ff8c00;
+  --color-primary-dark: #e67e00;
+  --color-secondary: #ff6b35;
 
   /* Cores - Neutras */
   --color-bg-light: #ffffff;
   --color-bg-light-secondary: #f5f5f5;
-  --color-bg-dark: #0d0d0d;
-  --color-bg-dark-secondary: #1a1a1a;
+  --color-bg-dark: #1a1a1a;
+  --color-bg-dark-secondary: #2d2d2d;
 
   --color-text-dark: #1a1a1a;
   --color-text-light: #ffffff;
@@ -305,61 +305,6 @@ small {
 /* ========================================
    ANIMATIONS
    ======================================== */
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes zoomIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 
 @keyframes fadeIn {
   from {
