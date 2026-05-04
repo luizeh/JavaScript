@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificador de Idade</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="stars"></div>
+    
+    <header class="header-new">
+      <div class="header-logo">
+        <i class="fas fa-cake-candles"></i>
+      </div>
+      <h1>Age Verifier</h1>
+      <p>Descubra sua idade e veja sua foto</p>
+    </header>
+
+    <main class="main-new">
+      <div class="container-new">
+        <section class="form-section">
+          <h2>Informações Pessoais</h2>
+          
+          <div class="form-group-new">
+            <label for="txtano">
+              <i class="fas fa-calendar-alt"></i>
+              Ano de Nascimento
+            </label>
+            <input
+              type="number"
+              name="txtano"
+              id="txtano"
+              min="1900"
+              max="2099"
+              placeholder="Ex: 1995"
+              class="input-new"
+            />
+          </div>
+
+          <div class="form-group-new">
+            <label><i class="fas fa-person"></i> Gênero</label>
+            <div class="gender-selector">
+              <input type="radio" name="radsex" id="mas" value="m" checked />
+              <label for="mas" class="gender-label">
+                <i class="fas fa-mars"></i>
+                <span>Masculino</span>
+              </label>
+              
+              <input type="radio" name="radsex" id="fem" value="f" />
+              <label for="fem" class="gender-label">
+                <i class="fas fa-venus"></i>
+                <span>Feminino</span>
+              </label>
+            </div>
+          </div>
+
+          <button type="button" class="btn-new" onclick="verificar()">
+            <i class="fas fa-sparkles"></i>
+            <span>Descobrir</span>
+          </button>
+        </section>
+
+        <section class="result-section" id="res"></section>
+      </div>
+    </main>
+
+    <footer class=\"footer-new\">
+      <p>Desenvolvido por <strong>Luizeh</strong> • 2026</p>
+    </footer></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

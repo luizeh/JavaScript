@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font: normal 20pt arial;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        var nome = window.prompt('Qual é seu nome?')
+        document.write(`Seu nome tem ${nome.length} letras. <br>`)
+        document.write(`Seu nome em maiúsculo é ${nome.toUpperCase()} <br>`)
+        document.write(`Seu nome em minúsculo é ${nome.toLowerCase()}`)
+
+        /* 
+        $ node
+        Welcome to Node.js v24.15.0.
+        Type ".help" for more information.
+        > var n1 = 176.67
+        undefined
+        > n1
+        176.67
+        > n1.toFixed(2).replace('.', ',')
+        '176,67'
+        >  n1.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})
+        'R$ 176,67'
+        */
+    </script>
+
+</body>
+</html>

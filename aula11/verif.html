@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+        .preto{
+            background-color: black;
+            color: white;
+        }
+        .nacionalidade{
+            margin-bottom: 100px;
+        }
+        .mudartema{
+            padding: 10px;
+            display: flex;
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+<body id="corpo">
+     <div class="mudartema"><input type="button" value="Mudar Tema" onclick="mudartema()">
+    </div>
+
+    <div class="nacionalidade">
+        <h1>Qual a sua nacionalidade?</h1>
+        Sua nacionalidade: <input type="text" name="nactxt" id="nactxt">
+        <input type="button" value="verificar" onclick="calcular()"></input>
+        <div id="nacres"></div>
+    </div>
+
+   <h1>Digita aí que vai aparecer na tela ultima forma</h1>
+    <input type="text" id="typetxt" placeholder="Digite aqui...">
+    <p>Voce digitou: <span id="typetxtres"></span></p>
+
+
+    <script>
+        
+        
+
+    function calcular(){
+        const nactxt = document.querySelector("#nactxt")
+        const res = document.querySelector("#nacres")
+        if(nactxt.value == "Brasil"){
+            res.innerHTML = 'Você é Brasileiro!'
+        }  else{
+        res.innerHTML = 'Você é Estrangeiro!'
+        }
+        }
+
+    function mudartema(){
+        const corpo = document.querySelector("#corpo")
+        corpo.classList.toggle('preto')
+    }
+
+    const campo = document.querySelector("#typetxt")
+        const destino = document.querySelector("#typetxtres")
+        typetxt.addEventListener('input', function(e) {
+            typetxtres.textContent = e.target.value
+        });
+    </script>
+</body>
+</html>

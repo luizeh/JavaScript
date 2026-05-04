@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(223, 223, 223);
+      }
+
+      h1, h2 {
+        text-align: center;
+      }
+      #imc {
+        text-align: center;
+        color: black;
+        font-size: 2em;
+      }
+      div {
+        background-color: rgb(139, 139, 139);
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Calculadora de IMC</h1>
+    <div class="resultadinho">
+      <h2>Seu IMC é <span id="resultado"></span></h2>
+    </div>
+      <h1 id="imc"></h1>
+    <script>
+      let peso = parseFloat(prompt("Digite seu peso").replace(",", "."));
+      let altura = parseFloat(prompt("Digite sua altura").replace(",", "."));
+      console.log(peso, altura);
+
+      let imc = peso / (altura * altura);
+      let resultado = imc.toLocaleString("pt-BR", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      });
+
+      const resultadex = document.getElementById("resultado");
+      resultadex.innerHTML = resultado;
+
+      const resultadoCard = document.querySelector(".resultadinho");
+
+      const resultadoText = document.getElementById("imc");
+
+      if (imc <= 18.5) {
+        resultadoCard.style.backgroundColor = "lightblue";
+        resultadoText.innerHTML = "Abaixo do peso";
+      } else if (imc <= 24.9) {
+        resultadoCard.style.backgroundColor = "lightgreen";
+        resultadoText.innerHTML = "Peso normal";
+      } else if (imc <= 29.9) {
+        resultadoCard.style.backgroundColor = "khaki";
+        resultadoText.innerHTML = "Acima do peso";
+      } else if (imc < 35) {
+        resultadoCard.style.backgroundColor = "orange";
+        resultadoText.innerHTML = "Obesidade classe I";
+      } else if (imc < 40) {
+        resultadoCard.style.backgroundColor = "orange";
+        resultadoText.innerHTML = "Obesidade classe II";
+      } else {
+        resultadoCard.style.backgroundColor = "tomato";
+        resultadoText.innerHTML = "Obesidade classe III";
+      }
+    </script>
+  </body>
+</html>
