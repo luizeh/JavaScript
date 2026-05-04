@@ -1,26 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hora do Dia</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body onload="carregar()">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="carregar()">
     <header>
-        <h1>Hora do Dia</h1>
+      <h1>Hora do Dia</h1>
     </header>
     <section>
-        <div id="msg">
+      <div id="msg" class="greeting">
+        <p id="saudacao" class="saudacao">Carregando...</p>
+        <p class="horario-label">Hora exata</p>
+        <p id="horario-exato" class="horario-exato">--:--:--</p>
+      </div>
+      <div id="foto" class="foto-container">
+        <img
+          id="imagem"
+          src="https://images.pexels.com/photos/8295269/pexels-photo-8295269.jpeg"
+          alt="Imagem do período do dia"
+        />
+      </div>
+    </section>
 
+    <section class="controls-section">
+      <h2>⚙️ Controles</h2>
+      <div class="controles">
+        <div class="control-group">
+          <label for="hora-input">Alterar Hora:</label>
+          <input type="time" id="hora-input" />
+          <button id="btn-aplicar" class="btn">Aplicar</button>
         </div>
-        <div id="foto">
-            <img id="imagem" src="https://images.pexels.com/photos/8295269/pexels-photo-8295269.jpeg" alt="">
-        </div>
+        <button id="btn-redefinir" class="btn btn-redefinir">
+          🔄 Redefinir para Hora Real
+        </button>
+      </div>
     </section>
     <footer>
-        <p>&copy; Luizeh</p>
+      <p>&copy; Luizeh</p>
     </footer>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

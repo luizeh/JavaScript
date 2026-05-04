@@ -1,0 +1,272 @@
+/* ========================================
+   CALCULADORA IMC - STYLES
+   ======================================== */
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg);
+}
+
+.imc-container {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+.imc-header {
+  text-align: center;
+  color: white;
+  margin-bottom: var(--spacing-3xl);
+  animation: slideInUp 0.6s ease-out;
+}
+
+.imc-header h1 {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.imc-header p {
+  font-size: 1.2rem;
+  opacity: 0.95;
+  margin-bottom: 0;
+}
+
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
+
+.imc-main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.form-card,
+.result-card {
+  background: white;
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-dark);
+  animation: zoomIn 0.6s ease-out;
+}
+
+.form-card h2,
+.result-card h2 {
+  color: #333;
+  margin-bottom: var(--spacing-xl);
+  font-size: 1.5rem;
+}
+
+/* ========================================
+   FORM STYLES
+   ======================================== */
+
+.form-group {
+  margin-bottom: var(--spacing-xl);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--spacing-md);
+  color: #333;
+  font-weight: var(--font-weight-semibold);
+}
+
+.form-group input {
+  width: 100%;
+  padding: var(--spacing-lg);
+  border: 2px solid #e0e0e0;
+  border-radius: var(--radius-lg);
+  font-size: 1rem;
+  transition: border-color var(--transition-base);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #999;
+}
+
+.form-card .btn {
+  margin-top: var(--spacing-md);
+}
+
+/* ========================================
+   RESULT CARD
+   ======================================== */
+
+.result-box {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-2xl);
+  color: white;
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+  animation: slideInRight 0.6s ease-out;
+}
+
+.result-value {
+  font-size: 3.5rem;
+  font-weight: var(--font-weight-extrabold);
+  margin-bottom: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
+
+.result-info {
+  margin-top: var(--spacing-xl);
+}
+
+.result-category {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-md);
+}
+
+.result-description {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* ========================================
+   CATEGORY COLORS
+   ======================================== */
+
+.category-underweight {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+}
+
+.category-normal {
+  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+}
+
+.category-overweight {
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+}
+
+.category-obesity1 {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.category-obesity2 {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.category-obesity3 {
+  background: linear-gradient(135deg, #c0392b 0%, #922b21 100%);
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.imc-footer {
+  text-align: center;
+  color: white;
+  opacity: 0.8;
+  font-size: 0.9rem;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 1024px) {
+  .imc-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .imc-header h1 {
+    font-size: 2rem;
+  }
+
+  .imc-header p {
+    font-size: 1rem;
+  }
+
+  .form-card,
+  .result-card {
+    padding: var(--spacing-xl);
+  }
+
+  .result-value {
+    font-size: 2.5rem;
+  }
+
+  .result-box {
+    padding: var(--spacing-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: var(--spacing-md);
+  }
+
+  .imc-header {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .imc-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .imc-header p {
+    font-size: 0.9rem;
+  }
+
+  .imc-main {
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .form-card,
+  .result-card {
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+  }
+
+  .form-group {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .result-value {
+    font-size: 2rem;
+  }
+
+  .result-category {
+    font-size: 1.2rem;
+  }
+
+  .result-description {
+    font-size: 0.9rem;
+  }
+
+  .imc-footer {
+    font-size: 0.8rem;
+  }
+}

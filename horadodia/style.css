@@ -1,40 +1,348 @@
 @charset "UTF-8";
- 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-color: rgb(148, 182, 255);
-    font: normal 15pt Arial;
+  background: linear-gradient(135deg, #ffd89b 0%, #ff8c69 100%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.8s ease;
 }
- 
+
 header {
-    color: white;
-    text-align: center;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
- 
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
 section {
-    background-color: white;
-    border-radius: 8px;
-    padding: 15px;
-    width: 500px;
-    margin: auto;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.274);
-   
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 90%;
+  max-width: 600px;
+  margin: 30px auto;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
 }
- 
-div {
-    text-align: center;
-    color: black;
+
+section:hover {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+  transform: translateY(-5px);
 }
- 
-div img {
-    margin-top: 35px;
-    border-radius: 50%;
-    width: 280px;
-    height: 280px;
+
+.greeting {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
 }
- 
- 
+
+.saudacao {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff6b35;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.horario-label {
+  font-size: 0.95rem;
+  color: #888;
+  margin: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.horario-exato {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin: 10px 0 0 0;
+  color: #2c3e50;
+  font-family: "Courier New", monospace;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.foto-container {
+  text-align: center;
+  color: #333;
+}
+
+.foto-container img {
+  margin-top: 20px;
+  border-radius: 50%;
+  width: 380px;
+  height: 380px;
+  object-fit: cover;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+  border: 8px solid rgba(255, 255, 255, 0.8);
+}
+
+.foto-container img:hover {
+  transform: scale(1.08) rotateZ(-2deg);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+.controls-section {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto 30px auto;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+}
+
+.controls-section h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.controles {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.control-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.control-group label {
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+}
+
+#hora-input {
+  padding: 10px 15px;
+  border: 2px solid #ff6b35;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#hora-input:hover {
+  border-color: #ff8c55;
+  box-shadow: 0 0 10px rgba(255, 107, 53, 0.2);
+}
+
+#hora-input:focus {
+  outline: none;
+  border-color: #ff6b35;
+  box-shadow: 0 0 15px rgba(255, 107, 53, 0.3);
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8c55 100%);
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(255, 107, 53, 0.3);
+}
+
+.btn-redefinir {
+  background: linear-gradient(135deg, #4ecdc4 0%, #44af9a 100%);
+  box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+}
+
+.btn-redefinir:hover {
+  box-shadow: 0 8px 20px rgba(78, 205, 196, 0.4);
+}
+
 footer {
-    color: white;
-    text-align: center;
-    font-style: italic;
+  color: white;
+  text-align: center;
+  font-style: italic;
+  padding: 25px;
+  margin-top: auto;
+  font-weight: 600;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 25px;
+    width: 95%;
+  }
+
+  .controls-section {
+    padding: 20px;
+    width: 95%;
+  }
+
+  .control-group {
+    flex-direction: column;
+  }
+
+  .horario-exato {
+    font-size: 2.8rem;
+  }
+
+  .saudacao {
+    font-size: 1.6rem;
+  }
+
+  .foto-container img {
+    width: 300px;
+    height: 300px;
+    border-width: 6px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    padding: 20px 15px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 0.95rem;
+  }
+
+  section {
+    padding: 20px;
+    width: 100%;
+    border-radius: 15px;
+    margin: 15px 0;
+  }
+
+  .controls-section {
+    padding: 15px;
+    width: 100%;
+    border-radius: 15px;
+    margin: 15px 0;
+  }
+
+  .controls-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .control-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .control-group label {
+    font-size: 0.9rem;
+  }
+
+  #hora-input {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .horario-exato {
+    font-size: 2.2rem;
+  }
+
+  .saudacao {
+    font-size: 1.3rem;
+  }
+
+  .horario-label {
+    font-size: 0.85rem;
+  }
+
+  .foto-container img {
+    width: 250px;
+    height: 250px;
+    margin-top: 15px;
+    border-width: 5px;
+  }
+
+  footer {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
 }

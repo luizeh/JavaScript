@@ -316,8 +316,17 @@ body {
     gap: 10px;
   }
 
+  .gender-label {
+    padding: 12px 15px;
+    font-size: 0.95em;
+  }
+
   .gender-label span {
     display: none;
+  }
+
+  .gender-label i {
+    font-size: 1.1em;
   }
 
   .result-section {
@@ -328,6 +337,245 @@ body {
     width: 200px;
     height: 200px;
   }
+}
+
+@media (max-width: 600px) {
+  .header-content h1 {
+    font-size: 1.8em;
+  }
+
+  .subtitle {
+    font-size: 0.9em;
+  }
+
+  .container {
+    padding: 25px;
+  }
+
+  .radio-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .radio-item {
+    min-width: 100%;
+  }
+
+  .resultado img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* MOBILE PEQUENO - 480px */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  .header-new {
+    padding: 25px 15px;
+    border-bottom: 1px solid #333333;
+  }
+
+  .header-logo {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+  }
+
+  .header-new h1 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+
+  .header-new p {
+    font-size: 0.9rem;
+    color: #d0d0d0;
+  }
+
+  .main-new {
+    padding: 20px 15px;
+  }
+
+  .container-new {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    max-width: 100%;
+  }
+
+  .form-section,
+  .result-section {
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .form-section h2,
+  .result-section p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .form-group-new {
+    margin-bottom: 15px;
+  }
+
+  .form-group-new label {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+
+  .input-new {
+    padding: 12px 15px;
+    font-size: 1rem;
+  }
+
+  .gender-selector {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .gender-label {
+    flex: 1;
+    min-width: calc(50% - 4px);
+    padding: 12px 10px;
+    gap: 5px;
+    font-size: 0.85rem;
+  }
+
+  .gender-label i {
+    font-size: 1em;
+  }
+
+  .gender-label span {
+    display: inline;
+  }
+
+  .btn-new {
+    padding: 15px;
+    font-size: 1rem;
+    gap: 8px;
+  }
+
+  .result-section img {
+    width: 150px;
+    height: 150px;
+    margin-top: 15px;
+  }
+
+  .result-section p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .footer-new {
+    padding: 15px;
+  }
+
+  .footer-new p {
+    font-size: 0.85rem;
+  }
+}
+
+/* MOBILE ULTRA PEQUENO - 375px */
+@media (max-width: 375px) {
+  html {
+    font-size: 13px;
+  }
+
+  .header-new {
+    padding: 20px 12px;
+  }
+
+  .header-logo {
+    font-size: 2em;
+    margin-bottom: 8px;
+  }
+
+  .header-new h1 {
+    font-size: 1.3rem;
+  }
+
+  .header-new p {
+    font-size: 0.85rem;
+  }
+
+  .main-new {
+    padding: 15px 10px;
+  }
+
+  .container-new {
+    gap: 10px;
+  }
+
+  .form-section,
+  .result-section {
+    padding: 15px;
+  }
+
+  .form-group-new {
+    margin-bottom: 12px;
+  }
+
+  .form-group-new label {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+  }
+
+  .input-new {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+
+  .gender-label {
+    min-width: calc(50% - 3px);
+    padding: 10px 8px;
+    font-size: 0.8rem;
+  }
+
+  .btn-new {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  .result-section img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .footer-new {
+    padding: 12px;
+    font-size: 0.8rem;
+  }
+}
+
+/* MELHORIAS DE ACESSIBILIDADE */
+.header-new p,
+.form-group-new label,
+.input-new::placeholder {
+  color: #c0c0c0;
+  opacity: 1;
+}
+
+.gender-label {
+  color: #e0e0e0;
+}
+
+/* Focus states para acessibilidade de teclado */
+.input-new:focus-visible,
+.btn-new:focus-visible {
+  outline: 2px solid #666666;
+  outline-offset: 2px;
+}
+
+.gender-label:focus-within {
+  outline: 2px solid #666666;
+  outline-offset: 2px;
 }
 
 .input {
