@@ -43,9 +43,9 @@ function atualizar() {
 
   // Mensagens de saudação
   const saudacoes = {
-    manhã: "🌅 Bom Dia!",
-    tarde: "☀️ Boa Tarde!",
-    noite: "🌙 Boa Noite!",
+    manhã: "Bom Dia!",
+    tarde: "Boa Tarde!",
+    noite: "Boa Noite!",
   };
   saudacaoSpan.textContent = saudacoes[periodo];
 

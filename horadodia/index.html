@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hora do Dia</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body onload="carregar()">
@@ -26,7 +31,7 @@
     </section>
 
     <section class="controls-section">
-      <h2>⚙️ Controles</h2>
+      <h2><i class="fas fa-sliders-h"></i> Controles</h2>
       <div class="controles">
         <div class="control-group">
           <label for="hora-input">Alterar Hora:</label>
@@ -34,7 +39,7 @@
           <button id="btn-aplicar" class="btn">Aplicar</button>
         </div>
         <button id="btn-redefinir" class="btn btn-redefinir">
-          🔄 Redefinir para Hora Real
+          <i class="fas fa-redo"></i> Redefinir para Hora Real
         </button>
       </div>
     </section>
