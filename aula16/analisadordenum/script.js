@@ -18,6 +18,7 @@ function adicionar() {
     item.text = `Valor ${n} adicionado!`;
     sel.appendChild(item);
 
+    res.innerHTML = ''
     num.value = "";
     num.focus();
   } else {
