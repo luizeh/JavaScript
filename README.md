@@ -18,17 +18,25 @@ com foco na prática dos fundamentos da linguagem e na construção de aplicaç�
 <ul>
   <li>
     Calculadora de IMC<br>
-    <a href="https://luizeh.github.io/javascript/calc-imc/">Acessar projeto</a>
+    <a href="https://luizeh.github.io/JavaScript/projetos/calc-imc/">
+      Acessar projeto
+    </a>
   </li>
   <br>
+
   <li>
     Hora do Dia<br>
-    <a href="https://luizeh.github.io/javascript/horadodia/">Acessar projeto</a>
+    <a href="https://luizeh.github.io/JavaScript/projetos/horadodia/">
+      Acessar projeto
+    </a>
   </li>
   <br>
+
   <li>
     Verificador de Idade<br>
-    <a href="https://luizeh.github.io/javascript/verificadoridade/">Acessar projeto</a>
+    <a href="https://luizeh.github.io/JavaScript/projetos/verificadoridade/">
+      Acessar projeto
+    </a>
   </li>
 </ul>
 
@@ -40,9 +48,11 @@ com foco na prática dos fundamentos da linguagem e na construção de aplicaç�
 </ul>
 
 <h2>Como executar</h2>
-<p>Você pode acessar os projetos diretamente pelos links acima ou clonar o repositório:</p>
+<p>
+Você pode acessar os projetos diretamente pelos links acima ou clonar o repositório:
+</p>
 
-<pre><code>git clone https://github.com/luizeh/javascript.git</code></pre>
+<pre><code>git clone https://github.com/luizeh/JavaScript.git</code></pre>
 
 <h2>Considerações</h2>
 <p>
