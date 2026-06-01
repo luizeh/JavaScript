@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS (opcional, já vem embutido no JS) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+  </head>
+  <body>
+    <button id="btn" onclick="modal()">Clique</button>
+
+    <script>
+  function modal() {
+    Swal.fire({
+      title: "Olálsajklsadlkjasdsadkjl",
+      timer: 5000,
+      timerProgressBar: true,
+      text: "Pagotti na área.",
+      icon: "question"
+    });
+
+    setTimeout(() => {
+      const pop = Swal.getPopup();
+
+      pop.addEventListener("mouseenter", () => {
+        Swal.stopTimer();
+      });
+
+      pop.addEventListener("mouseleave", () => {
+        Swal.resumeTimer();
+      });
+    }, 100);
+  }
+</script> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
