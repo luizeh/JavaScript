@@ -2,7 +2,7 @@
 
 <p>
 Este repositório reúne projetos desenvolvidos durante meus estudos de JavaScript, 
-com foco na prática dos fundamentos da linguagem e na construção de aplicações interativas para web.
+com foco na prática dos fundamentos da linguagem e na construção de aplicações interativas para web / sites.
 </p>
 
 <h2>Objetivo</h2>
