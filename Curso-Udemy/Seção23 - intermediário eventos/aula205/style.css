@@ -1,0 +1,13 @@
+     body{
+            font-family: Arial, Helvetica;
+        }
+        div#itens{
+            background-color: orange;
+        }
+        .vermelho{
+            background-color: red;
+            color: white;
+        }
+        .laranja{
+            background-color: orange;
+        }
